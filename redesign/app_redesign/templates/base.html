@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} Главная страница {% endblock %}</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/templatemo-xtra-blog.css' %}" rel="stylesheet">
+<!--
+
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo">
+                    <img src="{% static 'img/myavki6.jpg' %}" alt="Логотип" width="80" height="80">
+                </div>
+                <h1 class="text-center">Upcycle Elegance</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item {% if page == 'index' %} active {% endif %}"><a href="{% url 'index' %}" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Главная страница
+                    </a></li>
+                    <li class="tm-nav-item {% if page == 'post' %} active {% endif %}"><a href="{% url 'post' %}" class="tm-nav-link">
+                        <i class="fas fa-pen"></i>
+                        Наши работы
+                    </a></li>
+                    </a></li>
+                    <li class="tm-nav-item {% if page == 'about' %} active {% endif %}"><a href="{% url 'about' %}" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        О нас
+                    </a></li>
+                    <li class="tm-nav-item {% if page == 'contact' %} active {% endif %}"><a href="{% url 'contact' %}" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Контакты
+                    </a></li>
+                    <li class="tm-nav-item {% if page == 'product' %} active {% endif %}"><a href="{% url 'product' %}" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Product
+                    </a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+{% block content %}
+
+{% endblock %}
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/templatemo-script.js' %}"></script>
+</body>
+</html>

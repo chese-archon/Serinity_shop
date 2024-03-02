@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %} Главная страница {% endblock %}
+
+
+{% block content %}
+ <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="text-center"> Добро пожаловать! </h1>
+            <div class="row tm-row tm-mb-45">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    {% load static %}
+                    <img src="{% static 'img/myavki7.jpg' %}" alt="Image" class="img-fluid"  style="display: block; margin: 0 auto;">
+                </div>
+            </div>
+
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Рады приветствовать вас на нашем сайте</h2>
+                        <p>
+                            Добро пожаловать на наш сайт, посвященный уникальным решениям в мире дизайна и переработки мебели.
+                            Мы создали этот сайт с целью поддержки микробизнеса по перекраске и переделке мебели.
+                            Наша основная идея заключается в том, чтобы дать вторую жизнь неактуальной или поврежденной мебели,
+                            делая уникальные дизайнерские решения доступными для каждого.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row tm-row">
+                <article class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title"> Наша миссия: </h2>
+                    <div class="col-12 tm-color-gray">
+                        <div>
+                        <p>
+                            <dd><li>Уникальные дизайны</li></dd>
+                            Мы верим, что старые вещи могут стать новыми и выразительными.
+                            Мы создаем уникальные, стильные дизайны, чтобы помочь вам внести особенность в ваш интерьер.
+                            <dd><li>Экологическая ответственность</li></dd>
+                            Мы стремимся к уменьшению воздействия на окружающую среду. Вместо того чтобы выкидывать
+                            мебель, мы предлагаем доработку и реставрацию, что способствует сохранению природных
+                            ресурсов и уменьшению отходов.
+                            <dd><li>Разнообразие</li></dd>
+                            Мы предлагаем множество дизайнерских решений для любого интерьера, обеспечивая наших клиентов
+                            уникальной возможностью выбора и индивидуального подхода.
+                            <dd><li>Профессиональная работа</li></dd>
+                             Наша команда профессионалов способна обеспечить высококачественную обработку мебели,
+                             превращая старое в новое с учетом всех современных тенденций.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between tm-pt-45">
+                        <div class="row tm-row tm-mb-40">
+                            <div class="col-12">
+                                <div class="mb-4">
+                                    <p>
+                                        Приглашаем вас познакомиться с
+                                        <a rel="nofollow" target="_parent" href="{% url 'post' %}" class="tm-external-link">
+                                        нашими работами</a>
+                                        и найти уникальные дизайнерские
+                                        решения для вашего дома или бизнеса. Спасибо, что выбрали нас!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <footer class="row tm-row">
+                <hr class="col-12">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Ссылки на контакты:
+
+                    <ul class="tm-social-links">
+                        <li class="mb-2">
+                            <a href="https://t.me" class="d-flex align-items-center justify-content-center">
+                                <img src="{% static 'img/tg.png' %}" alt="TG Icon" width="40" height="40">
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://vk.com" class="d-flex align-items-center justify-content-center">
+                                <img src="{% static 'img/iconvk.png' %}" alt="VK Icon" width="40" height="40">
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://api.whatsapp.com/" class="d-flex align-items-center justify-content-center">
+                                <img src="{% static 'img/wapp2.png' %}" alt="WhatsApp Icon" width="40" height="40">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+
+{% endblock %}

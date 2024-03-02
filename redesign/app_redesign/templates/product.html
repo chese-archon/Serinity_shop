@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %} Works 2 {% endblock %}
+
+{% load static %}
+
+{% block content %}
+ <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="text-center"> Доступно к заказу </h1>
+            <div class="row tm-row tm-mb-45">
+            <div class="col-12">
+                {% for product in products %}
+                    <article class="col-12 col-md-6 tm-post">
+                    <hr class="tm-hr-primary">
+                    <a href="{% url 'product' %}" class="effect-lily tm-post-link tm-pt-60">
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{ product.name }}</h2>
+                    </a>
+                        <div class="media tm-person"><!--"slide"     src="{{ product.image }}" -->
+                            <img src="{{ product.image.url }}" alt="Product Image {{ product.name }}" class="img-fluid"  style="display: block; margin: 0 auto;">
+                        </div>
+
+
+                    <p class="tm-pt-30">
+                        Цена: {{ product.price }} ₽
+                    </p>
+                    <p class="tm-pt-30">
+                        Высота: {{ product.height }} см,
+                        ширина: {{ product.width }} см,
+                        глубина: {{ product.depth }} см
+                    </p>
+                    <div class="d-flex justify-content-between tm-pt-45">
+                        <span class="tm-color-primary">Описание: {{ product.description }}</span>
+                    </div>
+                    </hr>
+                </article>
+                {% endfor %}
+
+            </div>
+            </div>
+
+            <footer class="row tm-row">
+                <hr class="col-12">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+
+{% endblock %}
